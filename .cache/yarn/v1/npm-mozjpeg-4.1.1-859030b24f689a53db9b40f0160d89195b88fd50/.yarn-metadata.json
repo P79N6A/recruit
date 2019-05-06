@@ -1,0 +1,70 @@
+{
+  "manifest": {
+    "name": "mozjpeg",
+    "version": "4.1.1",
+    "description": "mozjpeg wrapper that makes it seamlessly available as a local dependency",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/imagemin/mozjpeg-bin.git"
+    },
+    "author": {
+      "name": "Kevin Mårtensson",
+      "email": "kevinmartensson@gmail.com",
+      "url": "github.com/kevva"
+    },
+    "engines": {
+      "node": ">=0.10.0"
+    },
+    "bin": {
+      "mozjpeg": "cli.js"
+    },
+    "scripts": {
+      "postinstall": "node lib/install.js",
+      "test": "xo && mocha --timeout 100000"
+    },
+    "files": [
+      "index.js",
+      "cli.js",
+      "lib"
+    ],
+    "keywords": [
+      "jpeg",
+      "jpg",
+      "img",
+      "image",
+      "compress",
+      "minify",
+      "mozjpeg",
+      "optimize"
+    ],
+    "dependencies": {
+      "bin-build": "^2.0.0",
+      "bin-wrapper": "^3.0.0",
+      "logalot": "^2.0.0"
+    },
+    "devDependencies": {
+      "bin-check": "^2.0.0",
+      "compare-size": "^1.0.1",
+      "mkdirp": "^0.5.0",
+      "mocha": "^2.2.4",
+      "rimraf": "^2.3.2",
+      "xo": "*"
+    },
+    "_registry": "npm",
+    "_loc": "/home/vagrant/.cache/yarn/v1/npm-mozjpeg-4.1.1-859030b24f689a53db9b40f0160d89195b88fd50/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# mozjpeg-bin [![Build Status](https://travis-ci.org/imagemin/mozjpeg-bin.svg?branch=master)](http://travis-ci.org/imagemin/mozjpeg-bin)\n\n> mozjpeg is a production-quality JPEG encoder that improves compression while maintaining compatibility with the vast majority of deployed decoders\n\n\n## Install\n\n```\n$ npm install --save mozjpeg\n```\n\n\n## Usage\n\n```js\nvar execFile = require('child_process').execFile;\nvar mozjpeg = require('mozjpeg');\n\nexecFile(mozjpeg, ['-outfile', 'output.jpg', 'input.jpg'], function (err) {\n\tconsole.log('Image minified!');\n});\n```\n\n\n## CLI\n\n```\n$ npm install --global mozjpeg\n```\n\n```\n$ mozjpeg --help\n```\n\n\n## License\n\nMIT © [imagemin](https://github.com/imagemin)\n",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) imagemin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "http://registry.npm.taobao.org/mozjpeg/download/mozjpeg-4.1.1.tgz#859030b24f689a53db9b40f0160d89195b88fd50",
+    "type": "tarball",
+    "reference": "http://registry.npm.taobao.org/mozjpeg/download/mozjpeg-4.1.1.tgz",
+    "hash": "859030b24f689a53db9b40f0160d89195b88fd50",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "859030b24f689a53db9b40f0160d89195b88fd50"
+}

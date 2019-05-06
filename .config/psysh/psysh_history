@@ -1,0 +1,7 @@
+_HiStOrY_V2_
+App\134Models\134User::create(['name'=>\040'Summer',\040'email'=>'summer@example.com','password'=>bcrypt('password')])
+App\134User::create(['name'=>\040'Summer',\040'email'=>'summer@example.com','password'=>bcrypt('password')])
+App\134User::first()
+App\134User::first()
+App\134User::first()
+App\134User::first()

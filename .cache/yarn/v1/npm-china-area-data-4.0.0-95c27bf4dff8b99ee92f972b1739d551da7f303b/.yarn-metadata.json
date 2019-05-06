@@ -1,0 +1,37 @@
+{
+  "manifest": {
+    "name": "china-area-data",
+    "version": "4.0.0",
+    "description": "中国省份城市区数据",
+    "main": "data.js",
+    "scripts": {
+      "build": "node scripts/format && node scripts/vux"
+    },
+    "keywords": [
+      "中国省份",
+      "行政区域",
+      "城市",
+      "省市区",
+      "vux"
+    ],
+    "author": {
+      "name": "airyland@qq.com"
+    },
+    "license": "MIT",
+    "_registry": "npm",
+    "_loc": "/home/vagrant/.cache/yarn/v1/npm-china-area-data-4.0.0-95c27bf4dff8b99ee92f972b1739d551da7f303b/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# 中国行政区域数据\n\n## 安装\n\n```\nnpm install china-area-data\n```\n\n## 版本说明\n\n目录下的 `data.json` 默认为最新版本。\n\n为了方便一些处理，在每个版本下生成了 `only_2_level_city_id.json` 文件方便统计和处理一些只有二级省市的条目。\n\nvux 目录生成的是 [VUX](https://vux.li) 组件库地址组件 `XAddress` 的内置数据。\n\n如果你想自己执行数据生成，请使用 `npm run build`\n\n### v4\n\n同 v3，但是把原来应该在县下的从直辖市分离出来。\n\n### v3\n\n[最新县及县以上行政区划代码（截止2016年7月31日）](http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201703/t20170310_1471429.html)\n\n### v2\n\n[最新县及县以上行政区划代码（截止2015年9月30日）](http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201608/t20160809_1386477.html)\n\n\n## 更新\n\n### v4.0.0\n\n数据源同 v3，但是重庆下的县作为列表放出来。\n\n<p align=\"center\">\n  <img src=\"./v4.0.0.changes.png\" alt=\"\">\n</p>\n\n### v3.0.0\n\n根据 2017.03.10 统计局数据进行更新\n\n<p align=\"center\">\n  <img src=\"./v3.0.0.changes.png\" alt=\"\">\n</p>\n\n\n### v2.1.0\n\n简化市辖区，不加市前缀。比如 北京市 - 北京市市辖区 - 东城区 => 北京市 - 市辖区 - 东城区\n\n<p align=\"center\">\n  <img src=\"./v2.1.0.changes.png\" alt=\"\">\n</p>\n\n### v2.0.0\n\n- 按照[最新统计局数据](http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201608/t20160809_1386477.html)进行更新，部分区域已经不存在，部分id做了更新。因此请*谨慎*更新，评估后端数据存储设计和前端交互再进行更新，避免错误更新用户数据或者导致数据丢失。\n\n完整更新如图\n<p align=\"center\">\n  <img src=\"./v2.0.0.changes.png\" alt=\"\">\n</p>\n",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) 2016 Airyland\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "http://registry.npm.taobao.org/china-area-data/download/china-area-data-4.0.0.tgz#95c27bf4dff8b99ee92f972b1739d551da7f303b",
+    "type": "tarball",
+    "reference": "http://registry.npm.taobao.org/china-area-data/download/china-area-data-4.0.0.tgz",
+    "hash": "95c27bf4dff8b99ee92f972b1739d551da7f303b",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "95c27bf4dff8b99ee92f972b1739d551da7f303b"
+}

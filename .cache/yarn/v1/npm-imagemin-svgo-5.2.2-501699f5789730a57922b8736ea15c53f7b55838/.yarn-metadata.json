@@ -1,0 +1,70 @@
+{
+  "manifest": {
+    "name": "imagemin-svgo",
+    "version": "5.2.2",
+    "description": "SVGO imagemin plugin",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/imagemin/imagemin-svgo.git"
+    },
+    "author": {
+      "name": "Kevin Mårtensson",
+      "email": "kevinmartensson@gmail.com",
+      "url": "github.com/kevva"
+    },
+    "maintainers": [
+      {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com"
+      },
+      {
+        "name": "Shinnosuke Watanabe",
+        "url": "github.com/shinnn"
+      }
+    ],
+    "engines": {
+      "node": ">=4"
+    },
+    "scripts": {
+      "test": "xo && ava"
+    },
+    "files": [
+      "index.js"
+    ],
+    "keywords": [
+      "compress",
+      "image",
+      "imageminplugin",
+      "img",
+      "minify",
+      "optimize",
+      "svg",
+      "svgo"
+    ],
+    "dependencies": {
+      "is-svg": "^2.0.0",
+      "svgo": "^0.7.0"
+    },
+    "devDependencies": {
+      "ava": "*",
+      "xo": "*"
+    },
+    "_registry": "npm",
+    "_loc": "/home/vagrant/.cache/yarn/v1/npm-imagemin-svgo-5.2.2-501699f5789730a57922b8736ea15c53f7b55838/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# imagemin-svgo [![Build Status](https://travis-ci.org/imagemin/imagemin-svgo.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-svgo) [![Build status](https://ci.appveyor.com/api/projects/status/esa7m3u8bcol1mtr/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/imagemin-svgo/branch/master)\n\n> [SVGO](https://github.com/svg/svgo) imagemin plugin\n\n\n## Install\n\n```\n$ npm install --save imagemin-svgo\n```\n\n\n## Usage\n\n```js\nconst imagemin = require('imagemin');\nconst imageminSvgo = require('imagemin-svgo');\n\nimagemin(['images/*.svg'], 'build/images', {\n\tuse: [\n\t\timageminSvgo({\n\t\t\tplugins: [\n\t\t\t\t{removeViewBox: false}\n\t\t\t]\n\t\t})\n\t]\n}).then(() => {\n\tconsole.log('Images optimized');\n});\n```\n\n\n## API\n\n### imageminSvgo([options])(buffer)\n\nReturns a `Promise<Buffer>`.\n\n#### options\n\nType: `Object`\n\nPass options to [SVGO](https://github.com/svg/svgo#what-it-can-do).\n\n#### buffer\n\nType: `Buffer`\n\nBuffer to optimize.\n\n\n## License\n\nMIT © [imagemin](https://github.com/imagemin)\n",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) imagemin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "http://registry.npm.taobao.org/imagemin-svgo/download/imagemin-svgo-5.2.2.tgz#501699f5789730a57922b8736ea15c53f7b55838",
+    "type": "tarball",
+    "reference": "http://registry.npm.taobao.org/imagemin-svgo/download/imagemin-svgo-5.2.2.tgz",
+    "hash": "501699f5789730a57922b8736ea15c53f7b55838",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "501699f5789730a57922b8736ea15c53f7b55838"
+}

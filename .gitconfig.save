@@ -1,0 +1,135 @@
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 69 insertions(+), 1 deletion(-)
+ create mode 100644 app/Http/Controllers/SessionsController.php
+ create mode 100644 resources/views/sessions/create.blade.php
+vagrant@homestead:~/Code/weibo$ git add -A
+warning: CRLF will be replaced by LF in resources/views/layouts/_header.blade.php.
+The file will have its original line endings in your working directory.
+vagrant@homestead:~/Code/weibo$ git commit -m "登录成功后导航逻辑"
+[login-logout e4e9799] 登录成功后导航逻辑
+ Committer: vagrant <vagrant@homestead>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 26 insertions(+), 8 deletions(-)
+vagrant@homestead:~/Code/weibo$ git log
+commit e4e9799c92dc09ea47b238293047a85fe65bff03 (HEAD -> login-logout)
+Author: vagrant <vagrant@homestead>
+Date:   Fri Apr 12 08:47:18 2019 +0000
+
+    登录成功后导航逻辑
+
+commit b308a7e3682fab8a047e722abed4e6a43b796e70
+Author: vagrant <vagrant@homestead>
+Date:   Fri Apr 12 08:39:25 2019 +0000
+
+    创建会话
+
+commit fb14f29b2749e49eb3472cfdc9b03d2d606064d5 (origin/master, sign-up, master)
+Author: vagrant <vagrant@homestead>
+Date:   Tue Apr 9 01:03:36 2019 +0000
+
+    完成用户注册功能
+
+commit fec0b89bc6a658a84a2043295997718d66c9a917
+Author: vagrant <vagrant@homestead>
+Date:   Mon Apr 8 12:58:10 2019 +0000
+
+    用户显示页面
+
+[1]+  Stopped                 git log
+vagrant@homestead:~/Code/weibo$ git add -A
+warning: CRLF will be replaced by LF in resources/views/sessions/create.blade.php.
+The file will have its original line endings in your working directory.
+vagrant@homestead:~/Code/weibo$ git commit -m "会话管理部分小姐"
+[login-logout dfbc858] 会话管理部分小姐
+ Committer: vagrant <vagrant@homestead>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+vagrant@homestead:~/Code/weibo$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+vagrant@homestead:~/Code/weibo$ git checkout .
+vagrant@homestead:~/Code/weibo$ git merge login-logout
+Updating fb14f29..dfbc858
+Fast-forward
+ app/Http/Controllers/SessionsController.php | 34 +++++++++++++++++++++++
+ app/Http/Controllers/UsersController.php    |  2 ++
+ resources/js/bootstrap.js                   |  6 -----
+ resources/views/layouts/_header.blade.php   | 25 +++++++++++++++--
+ resources/views/layouts/default.blade.php   |  1 +
+ resources/views/sessions/create.blade.php   | 42 +++++++++++++++++++++++++++++
+ routes/web.php                              |  6 ++++-
+ 7 files changed, 107 insertions(+), 9 deletions(-)
+ create mode 100644 app/Http/Controllers/SessionsController.php
+ create mode 100644 resources/views/sessions/create.blade.php
+vagrant@homestead:~/Code/weibo$ git push
+Counting objects: 35, done.
+Compressing objects: 100% (33/33), done.
+Writing objects: 100% (35/35), 4.81 KiB | 102.00 KiB/s, done.
+Total 35 (delta 19), reused 0 (delta 0)
+remote: Resolving deltas: 100% (19/19), completed with 9 local objects.
+To github.com:hellojou/weibo.git
+   fb14f29..dfbc858  master -> master
+vagrant@homestead:~/Code/weibo$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+vagrant@homestead:~/Code/weibo$ git checkout -b user-crud
+Switched to a new branch 'user-crud'
+vagrant@homestead:~/Code/weibo$ npm run watch-poll
+
+> @ watch-poll /home/vagrant/Code/weibo
+> npm run watch -- --watch-poll
+
+
+> @ watch /home/vagrant/Code/weibo
+> npm run development -- --watch "--watch-poll"
+
+
+> @ development /home/vagrant/Code/weibo
+> NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js "--watch" "--watch-poll"
+
+ 10% building 1/1 modules 0 active
+webpack is watching the files…
+
+ 98% after emitting SizeLimitsPlugin
+
+ DONE  Compiled successfully in 42774ms                                 09:15:54
+
+       Asset      Size   Chunks             Chunk Names
+/css/app.css   175 KiB  /js/app  [emitted]  /js/app
+  /js/app.js  1.37 MiB  /js/app  [emitted]  /js/app
+
+vagrant@homestead:~/Code/weibo$ php artisan make:policy UserPolicy
+Policy created successfully.
+vagrant@homestead:~/Code/weibo$
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = vagrant
+#	email = vag
+

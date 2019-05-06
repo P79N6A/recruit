@@ -1,0 +1,44 @@
+{
+  "manifest": {
+    "name": "css-select-base-adapter",
+    "version": "0.1.0",
+    "description": "Provides some base functions needed by a css-select adapter so that you don't have to implement the whole thing.",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/nrkn/css-select-base-adapter.git"
+    },
+    "keywords": [
+      "css",
+      "select",
+      "adapter",
+      "css-select"
+    ],
+    "bugs": {
+      "url": "https://github.com/nrkn/css-select-base-adapter/issues"
+    },
+    "homepage": "https://github.com/nrkn/css-select-base-adapter#readme",
+    "author": {
+      "name": "Nik Coughlin",
+      "email": "nrkn.com@gmail.com"
+    },
+    "license": "MIT",
+    "_registry": "npm",
+    "_loc": "/home/vagrant/.cache/yarn/v1/npm-css-select-base-adapter-0.1.0-0102b3d14630df86c3eb9fa9f5456270106cf990/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# css-select-base-adapter\n\nProvides some base functions needed by a \n[`css-select`](https://github.com/fb55/css-select) adapter so that you don't\nhave to implement the whole thing.\n\n## usage\n\n```javascript\nvar baseAdapter = require('css-select-base-adapter');\n\nvar myAdapter = {\n  // your partial implementation here\n};\n\n// get an adapter with everything needed by css-select\nvar adapter = baseAdapter(myAdapter);\n\n// use adapter with css-select...\n```\n\n## how it works\n\nAn adapter for `css-select` requires the following functions to be implemented:\n\n```\nisTag, existsOne, getAttributeValue, getChildren, getName, getParent,\ngetSiblings, getText, hasAttrib, removeSubsets, findAll, findOne\n```\n\nYou can pass this module a more minimal implementation and it will return a full \nadapter that fills in any missing functions, provided that you implement at \nleast:  \n\n```\nisTag, getAttributeValue, getChildren, getName, getParent, getText\n```\n\nIf you provide any of the other methods required of an adapter, the base adapter \nwill use your implementation instead of its own.\n\nSee the \n[`css-select` readme](https://github.com/fb55/css-select/blob/master/README.md)\nfor more information on the required function signatures.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "http://registry.npm.taobao.org/css-select-base-adapter/download/css-select-base-adapter-0.1.0.tgz#0102b3d14630df86c3eb9fa9f5456270106cf990",
+    "type": "tarball",
+    "reference": "http://registry.npm.taobao.org/css-select-base-adapter/download/css-select-base-adapter-0.1.0.tgz",
+    "hash": "0102b3d14630df86c3eb9fa9f5456270106cf990",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "0102b3d14630df86c3eb9fa9f5456270106cf990"
+}
